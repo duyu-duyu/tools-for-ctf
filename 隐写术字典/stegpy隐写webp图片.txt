@@ -1,0 +1,18 @@
+Install:
+
+$ pip3 install stegpy
+How to use:
+
+Hide a message or file:
+$ stegpy "Hello World!" image.png
+Extract it:
+$ stegpy _image.png
+Encrypt:
+$ stegpy "Hello World!" image.png -p
+Enter password (will not be echoed):
+Verify password (will not be echoed):
+$ stegpy _image.png -p
+Enter password (will not be echoed):
+Hello World!
+More options:
+$ stegpy -h
