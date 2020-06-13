@@ -1,0 +1,115 @@
+<html>
+<head><meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+
+    <title>Velato | Note Tool</title>
+    <link rel="stylesheet" type="text/css" href="css-family=PT+Sans-400,400italic,700-Abril+Fatface.css" tppabs="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface" />
+    <link rel="Stylesheet" type="text/css" href="Velato.css-v=2.2.6970.20043.css" tppabs="http://velato.net/Styles/Velato.css?v=2.2.6970.20043" />
+    <link rel="icon"
+          type="image/png"
+          href="/Content/Velato/Velato_favicon.png">
+    <script src="jquery-1.10.2.js" tppabs="http://velato.net/Scripts/jquery-1.10.2.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 300) {
+                    $("#menu").addClass("smaller");
+                } else {
+                    $("#menu").removeClass("smaller");
+                }
+            });
+        });
+    </script>
+    
+    <script type="text/javascript">
+
+        function loadSampleProgram()
+        {
+            if ($('#programLoader').val().toString() == 'none') {
+                $('#codeBlock').text();
+                return;
+            }
+            var client = new XMLHttpRequest();
+            client.open('GET', '/Content/Velato/SamplePrograms/' + $('#programLoader').val() + '.txt');
+            client.onreadystatechange = function() {
+                $('#codeBlock').text(client.responseText);
+            }
+            client.send();
+        }
+
+        function getNotes()
+        {
+            if ($('#codeBlock').val().trim() == '') {
+                alert("You must have at least one command, starting with the 'Starting Note' command");
+            }
+            $.ajax({
+                url: '/Language/GetNotes',
+                type: 'POST',
+                traditional: true,
+                data: { commandList: $('#codeBlock').val() },
+                success: function (result) {
+                    if (result.Success)
+                        $('#suggestedNotes').html("<h4>Suggested Notes:</h4>" + result.CommandList);
+                    else
+                        $('#suggestedNotes').html("<h4>Error:</h4><span class='error'>" + result.Message + "</span>");
+                },
+                error: function (err) {
+                    alert(err);
+                }
+            });
+
+        }
+    </script>
+    <style type="text/css">
+        #leftCol, #rightCol {
+            float: left;
+        }
+        #rightCol {
+            padding-left: 40px;
+            width: 600px;
+        }
+        #content {
+            width: 1200px;
+            max-width: 1200px;
+        }
+        .error {
+            color: #AA0000;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="menu">
+        <h2><a href="index.htm" tppabs="http://velato.net/">Velato</a></h2>
+        <ul>
+            <li><a href="index-1.htm" tppabs="http://velato.net/Language/HelloWorld/">"Hello World" example</a></li>
+            <li><a href="index-2.htm" tppabs="http://velato.net/Language/NoteTool/">Note Suggestion Tool</a></li>
+            <!--li><a href="/Language/Index/">Language Specifics</a></li-->
+        </ul>
+    </div>
+    <div id="content">
+        
+<div style="font-size: 75%;">
+    Exercise: Try loading the "Hello, World!" example and re-working it (with "Change Root Note" and perhaps using variables in the place of chars) to create different possibilities.
+</div>
+<div id="leftCol">
+    <h4>Enter Pseudo Code:</h4>
+    Load Sample Program: <select id="programLoader" onchange="loadSampleProgram();">
+        <option value="none"></option>
+        <option value="HelloWorld">Hello, World!</option>
+        <!--option value="99Bottles">99 Bottles of Beer</option-->
+    </select>
+
+    <br />
+    <textarea id="codeBlock" rows="30" cols="50"></textarea><br />
+    <input type="button" value="Convert" onclick="getNotes();" />
+</div>
+<div id="rightCol">
+    <div id="suggestedNotes"></div>
+</div>
+
+    </div>
+</body>
+</html>

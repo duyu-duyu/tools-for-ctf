@@ -1,0 +1,94 @@
+<html>
+<head><meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+
+    <title>Velato | Hello World</title>
+    <link rel="stylesheet" type="text/css" href="css-family=PT+Sans-400,400italic,700-Abril+Fatface.css" tppabs="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface" />
+    <link rel="Stylesheet" type="text/css" href="Velato.css-v=2.2.6970.20043.css" tppabs="http://velato.net/Styles/Velato.css?v=2.2.6970.20043" />
+    <link rel="icon"
+          type="image/png"
+          href="/Content/Velato/Velato_favicon.png">
+    <script src="jquery-1.10.2.js" tppabs="http://velato.net/Scripts/jquery-1.10.2.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 300) {
+                    $("#menu").addClass("smaller");
+                } else {
+                    $("#menu").removeClass("smaller");
+                }
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+    <div id="menu">
+        <h2><a href="index.htm" tppabs="http://velato.net/">Velato</a></h2>
+        <ul>
+            <li><a href="index-1.htm" tppabs="http://velato.net/Language/HelloWorld/">"Hello World" example</a></li>
+            <li><a href="index-2.htm" tppabs="http://velato.net/Language/NoteTool/">Note Suggestion Tool</a></li>
+            <!--li><a href="/Language/Index/">Language Specifics</a></li-->
+        </ul>
+    </div>
+    <div id="content">
+        
+
+<h3>Building a Velato program</h3>
+
+<p>
+    The Velato language is music-based and encoded as a MIDI file read by the compiler. This "Hello, World!" example was built using the <a href="javascript:if(confirm('http://guidolib.sourceforge.net/GUIDO/impl.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://guidolib.sourceforge.net/GUIDO/impl.html'" tppabs="http://guidolib.sourceforge.net/GUIDO/impl.html">GUIDO Notation System</a>, with gmn2midi to convert text into MIDI files. It's a very intuitive notation system but now pretty dated. I would suggest using <a href="javascript:if(confirm('http://en.wikipedia.org/wiki/GNU_LilyPond  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://en.wikipedia.org/wiki/GNU_LilyPond'" tppabs="http://en.wikipedia.org/wiki/GNU_LilyPond">LilyPond</a>, which is more powerful and more widely used, or if you want to bypass MIDI entirely, there's <a href="javascript:if(confirm('https://github.com/eerwitt/velato-js  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://github.com/eerwitt/velato-js'" tppabs="https://github.com/eerwitt/velato-js">Velato.js</a> by Erik Erwitt.
+
+    In GUIDO, notes are represented in the format G0/2, where G is the note, 0 is the octave (equivalent to octave 5 in MIDI), and /2 represents a half-note. If the octave is not provided for a note, it uses the previous note's octave -- same for note durations. Rests are underscores. Comments are Pascal-style (* *) and can be used to track commands within the .gmn file.
+
+</p>
+<h4>Writing "Hello, World!"</h4>
+
+<p>
+    Okay, let's start with printing the 'H' character to the screen. The Velato command to print a character is Major 6th, Major 5th. If we're writing in C, this is the progression C A G (we always have to start commands with the command root note, which, in this case, is C, as we're starting the program with it).Looking at the expression list in <a href="#commandList">this post</a>, The expression for a char value is 3rd, 4th. The first 3rd could be major or minor, but since we've used E already, we'll use that, as opposed to E&amp; (which is the GUIDO representation of E-flat).
+
+    This we follow with the ASCII value of 'H'. This happens to be 72 (there's a list <a href="javascript:if(confirm('http://www.asciitable.com/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.asciitable.com/'" tppabs="http://www.asciitable.com/">here</a>), which we represent as "a d#" (we get this from the number of half-steps up from the command root, starting up a half-step, and excluding the Perfect 5th -- it's probably easier to just write it out once and refer to it, like the chart in the last post, <a href="javascript:if(confirm('http://danieltemkin.com/Blog/post/Velato-Commands.aspx  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://danieltemkin.com/Blog/post/Velato-Commands.aspx#c_chart'" tppabs="http://danieltemkin.com/Blog/post/Velato-Commands.aspx#c_chart">here</a>). Unfortunately, we ended up using a d# (equivalent to e&amp;) after all. We can make this more palatable by making it part of a chord, either by combining it with the notes ahead or behind it, or with notes in additional tracks which are not part of the program.We end the integer with a Perfect 5th, which is G. This gives us the complete command:
+</p>
+<pre>[ c a g e f a d# g ]</pre>
+<p><a href="javascript:if(confirm('http://danieltemkin.com/Content/Velato/velatotracks/print_h.mid  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://danieltemkin.com/Content/Velato/velatotracks/print_h.mid'" tppabs="http://danieltemkin.com/Content/Velato/velatotracks/print_h.mid">Click to hear actual midi file</a>After creating a .mid file with gmn2midi, we use Vlt to compile, and see this abstract syntax tree. This helps us verify that we used the correct notes, and didn't end up with some command we didn't intend:</p>
+
+<pre>Program
+        DeclareFunction
+        PrintToScreen
+                CharConstant</pre>
+<p>
+    Now, let's make it sound a bit better.
+
+    We can turn this into several chords: a C6 and an F7. Since we're at the end of a command, we can add a C after (that's our command root), which will be interpreted as No-ops. In Guido, we use curly brackets to indicate notes played together -- the notes of the chord are seperated by comma.This would give us this:
+</p>
+<pre>[ {c-1/4, a1, g0, e } { f/4, a, d#1} _/8 { g0/4., c1 } ]</pre>
+<p><a href="javascript:if(confirm('http://danieltemkin.com/Content/Velato/velatotracks/print_h_2.mid  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://danieltemkin.com/Content/Velato/velatotracks/print_h_2.mid'" tppabs="http://danieltemkin.com/Content/Velato/velatotracks/print_h_2.mid">midi file</a>This is an equivalent command (both print the letter 'H'), but the second is a bit more musical. In addition to creating chords, I've also spread the notes into several octaves and altered the rhythma bit.Next, let's change the command root note to an F. We do this with a Major 2nd interval, followed by the new root note. In this case:</p>
+<pre>c d f</pre>
+<p>Now we write the next command (to print 'e'), starting from F instead of C. The first part of the command is the same, only transposed:</p>
+<pre>f d c a b&amp;</pre>
+<p>In ASCII, 'e' is 101, which is g f# g -- we end with a Perfect 5th to indicate the end of an integer, so that's a "c" again. The whole command is:</p>
+<pre>f d c a b&amp; g f# g c</pre>
+<p>We can combine this with the previous command ('c d f') and make it a bit more musical:</p>
+<pre>c0/16 d1 f {f-1/8, d1, c0, a} {b&amp;1/4, g-1, f#0} _/8 { g0/4., c1}</pre>
+<p><a href="javascript:if(confirm('http://danieltemkin.com/Content/Velato/velatotracks/print_h_3.mid  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://danieltemkin.com/Content/Velato/velatotracks/print_h_3.mid'" tppabs="http://danieltemkin.com/Content/Velato/velatotracks/print_h_3.mid">entire song so far</a>It's not going to win us any awards for composition yet, but at least it sounds intentional, instead of a bunch of random notes.Let's change the command root to B&amp; for a bit of a change, and print the next character, the first 'l'.The two commands are:</p>
+
+<pre>f g b&amp; (* change of command root *)
+b&amp; g f d e&amp; c b a&amp; f (* print 'l' *)</pre>
+
+<p>Or, once we change the rhythm and octaves:</p>
+
+<pre>f0/16 g1 b&amp; (* change of command root *)
+{b&amp;-1/8, g1, f0, d} 
+{e&amp;1/4, c0, b0} a&amp;1/8 {f/4, b&amp;} b&amp;0 (* print 'l' *)</pre>
+
+<p>
+    <a href="javascript:if(confirm('http://danieltemkin.com/Content/Velato/velatotracks/print_h_4.mid  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://danieltemkin.com/Content/Velato/velatotracks/print_h_4.mid'" tppabs="http://danieltemkin.com/Content/Velato/velatotracks/print_h_4.mid">entire song so far</a>The rest of the notes are selected using the same technique. We're not going to win any Grammys with our final program, but it's at least somewhat musical (in a free-form jazz sorta way) instead of random notes. With more time and effort, the song could be further composed into something more pleasing. I'll post any further re-workings of the song here.<a href="javascript:if(confirm('http://danieltemkin.com/Content/Velato/velatotracks/print_h_5.mid  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://danieltemkin.com/Content/Velato/velatotracks/print_h_5.mid'" tppabs="http://danieltemkin.com/Content/Velato/velatotracks/print_h_5.mid">Complete "Hello, World" program midi file</a><a href="javascript:if(confirm('http://danieltemkin.com/Content/Velato/velatotracks/print_h_5.gmn  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://danieltemkin.com/Content/Velato/velatotracks/print_h_5.gmn'" tppabs="http://danieltemkin.com/Content/Velato/velatotracks/print_h_5.gmn">GUIDO source for complete program</a>
+
+    Here's the program as sheet music. Keep in mind that this set of notes is *not* the actual program; if a MIDI file is created from this progression of notes, the concurrent notes might be interpreted in a different order in the file, and create an invalid program.<img src="HelloWorld.gif" tppabs="http://velato.net/Content/Velato/HelloWorld.gif" alt="" width="434" height="607" />
+</p>
+
+    </div>
+</body>
+</html>
