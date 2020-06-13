@@ -1,0 +1,2 @@
+用steghide可以提取出东西
+steghide extract -sf xxx.wav
