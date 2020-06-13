@@ -1,0 +1,148 @@
+New SSTV modes added in MMSSTV
+
+Written by JE3HHT Makoto Mori
+Translated into English by JA7UDE Nob Oba
+
+
+1. VIS code
+
+  All the even-parity codes in the VIS have already been used now.  If I use the remaining odd-parity codes for defining new modes, it is a matter of time to run out of them.  For this reason, I have extended the VIS code to 16 bits as follows: 
+
+
+	1900	300ms
+	1200	10ms
+	1900	300ms
+	1200	30ms
+	d0	30ms
+	d1	30ms
+	:	:
+	d15	30ms
+	1200	30ms
+
+	(d0-d15 : 1-1100Hz, 0-1300Hz)
+
+When you assign a code to your new mode, it is a good idea to use an odd parity code, which is not in use now, in the least 8 bits (d0-d7), so as not to get the conventional 8-bit VIS decoder confused.  For this reason, MMSSTV uses VIS code 23H in d0-d7.  If you add a code for your new mode, I would recommend you to assign some code other than 23H in d0-d7, so that you can make full use of upper 8 bits to represent up to 256 modes.
+
+
+2. MP mode
+
+MP mode is based on the color difference scheme used in PD mode.  I have added this mode for alleviating multi-path/jitter effects on the 20-meter band.  To increase the scan time for each pixel, the color information is compressed along the vertical axis.
+
+
+Mode	Size	VIS	TW [ms]
+MP73	320x256	2523h	140.000
+MP115	320x256	2923h	223.000
+MP140	320x256	2a23h	270.000
+MP175	320x256	2c23h	340.000
+
+
+	1200Hz	9.000ms
+	1500Hz	1.000ms
+	Y(odd)	TW
+	R-Y	TW
+	B-Y	TW
+	Y(even)	TW
+	(Repeat 128 scans)
+
+
+3. MR/ML mode
+
+MR/ML mode is based on the color difference scheme used in Robot 24/72 mode.  It is aimed to provide good resolution under good condx.  The color information is compressed along the horizontal axis.
+
+Mode	Size	VIS	TW [ms]
+MR73	320x256	4523h	138.000
+MR90	320x256	4623h	171.000
+MR115	320x256	4923h	220.000
+MR140	320x256	4a23h	269.000
+MR175	320x256	4c23h	337.000
+ML180	640x496	8523h	176.500
+ML240	640x496	8623h	236.500
+ML280	640x496	8923h	277.500
+ML320	640x496	8a23h	317.500
+
+	1200Hz	9.000ms
+	1500Hz	1.000ms
+	Y	TW
+	LP	0.100ms
+	R-Y	TW/2
+	LP	0.100ms
+	B-Y	TW/2
+	LP	0.100ms
+	(Repeat 256 or 496 scans)
+
+	LP = output the last pixel signal
+
+4.MP-N mode
+Å@This is a narrow band version of the MP mode. The scan signals occupy 2044Hz to 2300Hz.
+
+Mode	Size	N-VIS	TW[ms]
+MP73-N	320x256	02h	140.000
+MP110-N	320x256	04h	212.000
+MP140-N	320x256	05h	270.000
+
+	1900Hz	9.000ms
+	2044Hz	1.000ms
+	Y(odd)	TW
+	R-Y	TW
+	B-Y	TW
+	Y(even)	TW
+	(Repeat 128 scans)
+
+5.MC-N mode
+  This is a narrow bande version of the RGB mode. The scan signals occupy 2044Hz to 2300Hz.
+
+Mode	Size	N-VIS	TW[ms]
+MC110-N	320x256	14h	143.000
+MC140-N	320x256	15h	180.000
+MC180-N	320x256	16h	232.000
+
+	1900Hz	8.000ms
+	2044Hz	0.500ms
+	R	TW
+	G	TW
+	B	TW
+	(Repeat 256 scans)
+
+7.N-VIS mode
+  The VIS code of the narrow band modes are defined by the 24-bit FSK as follows. One symbol consists of 6 bits.
+
+	1900Hz	300ms
+	2100Hz	100ms
+	1900Hz	22ms	start bit
+	D05	22ms	(1=1900Hz, 0=2100Hz)
+	D04	22ms		:
+	D03	22ms		:
+	D02	22ms
+	D01	22ms
+	D00	22ms
+	D15	22ms
+	D14	22ms
+	D13	22ms
+	D12	22ms
+	D11	22ms
+	D10	22ms
+	D25	22ms
+	D24	22ms
+	D23	22ms
+	D22	22ms
+	D21	22ms
+	D20	22ms
+	D35	22ms
+	D34	22ms
+	D33	22ms
+	D32	22ms
+	D31	22ms
+	D30	22ms
+
+	D0(D05-D00) = 101101
+	D1(D15-D10) = 010101
+	D2(D25-D20) = N-VIS
+	D3(D35-D30) = 010101 .xor. N-VIS
+
+	e.g. MP73-N = 101101 010101 000010 010111
+
+It is free to use these modes in any kind of software or equipment.  You do not have to inform me.  Feel free to do it.
+
+73 Mako
+
+

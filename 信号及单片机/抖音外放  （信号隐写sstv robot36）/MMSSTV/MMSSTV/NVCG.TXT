@@ -1,0 +1,68 @@
+The NVCG SSTV contest is sponsored by NVCG , Nishi Nippon Visual Communication Group. The chief organizer of the contest is JA6AP, the president of NVCG .
+
+	http://www.tim.hi-ho.ne.jp/ja6ap/nvcg/index.html
+
+Date; Total of four days
+~~~~~~~~~~~~~~~~~~~~~~~~
+ 2nd and 3rd weekend / April (UTC)
+
+ e.g.
+  10/April 2004 00:00Z to 11/April 2004 24:00Z
+  17/April 2004 00:00Z to 18/April 2004 24:00Z   
+   
+ Would be welcome in this contest. 
+
+(1)  Eligibility and conditions
+  Amateur radio operators licensed from 3.5Mhz to 50Mhz frequency are welcome to participate in the contest. 
+The operating frequency, output power and other operating conditions must be within the licensed criteria of the licensee.
+  
+(2) Contest number
+ NVCG members add "M" after RSV.  i.e.595M 
+   General participants provide RSV only.
+ 
+(3) Score
+   2 points for a QSO with a NVCG member
+   1 point for a QSO with a general participant 
+
+ Only one QSO with the same station is counted toward the score regardless the operating band.
+The multiplier is the total number of prefixes worked excluding the same prefix as yours.
+The total score=total points x the multiplier.
+
+i.e. W5ZR had QSOs with JA6AP(NVCG member, 2 points)on 10 m and 15m(only one QSO counted), with W5ABC(1 point)on 10m and 20m, and with K5XYZ (1 point)on 40m.  The applicable prefixes are two, JA6 and K5.  W5 is not counted due to the same prefix.
+The total score =4 points x 2 prefixes=8
+
+
+Entry Divisions;
+~~~~~~~~~~~~~~~~
+ There are tow divisions; the Japanese Stations Division and the Overseas Stations Division.
+  
+Award;
+~~~~~~
+ Diploma and corresponding award will be given to the top three winners in both the Japanese stations division and the overseas station division
+You can use the Log and the summary sheet form of ARRL or CQ DX contest , but it is much better to use for NVCGs contest log form.
+
+           NVCGs Log & Summary sheet;
+Download the log and summary sheet from below,
+
+    http://www.roy.hi-ho.ne.jp/shimamura/
+
+  ENVCG2K.EXE   NVCGLOG.EXE   ENVCGBAS.XLS  VB6DLL.EXE   MSVBVM60.DLL
+
+Read me html (JH4ABZ Home Page) http://www.roy.hi-ho.ne.jp/shimamura/elog/ENVCGLOG.html
+
+ The contest Log should be mailed to the following address.
+
+Kiyotada Shimizu. JA6AP
+1-21-5 Hayama Munakata City Fukuoka Pref. ZIP 811-4171
+
+The due date for submission of the log is 30 May. 2004.
+----
+The contest result will be announced in the future issues of
+The Japanese CQ magazine and NVCG Home Page,QTC site,
+JASTA Home Page etc.
+
+All the NVCG stuff members welcome the worldwide participations in the contest and request your cooperation.
+
+The president of NishiNippon Visual Communication Group
+  Kiyotada Shimizu JA6AP         E-mail: ja6ap@tim.hi-ho.ne.jp
+

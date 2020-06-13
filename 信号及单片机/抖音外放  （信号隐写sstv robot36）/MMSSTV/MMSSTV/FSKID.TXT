@@ -1,0 +1,50 @@
+MMSSTV FSKID
+
+[Code composition]
+
+The FSKID used in MMSSTV is sent by using 45.45 baudot FSK.  One symbol is composed of 6 bits (B5-B0).
+
+	1500Hz	300ms	(1900Hz in a narrow mode)
+	2100Hz	100ms
+	1900Hz	22ms	start bit
+	B5	22ms	(1=1900Hz, 0=2100Hz)
+	B4	22ms		:
+	B3	22ms		:
+	B2	22ms
+	B1	22ms
+	B0	22ms
+	B5	22ms
+	:
+	B0	22ms
+	B5	22ms
+	:
+	B0	22ms
+	:
+
+[Call sign]
+
+	$2A C1 C2 ... CN $01 XSUM
+		XSUM = C1 xor C2 xor ... xor CN
+	
+	C1 to CN are modified ASCII code. Code symbols $20 to $5F are represented by $00 to $3F in Cx (x = 1 to N).
+
+[Contest number (3 digits or 4 digits and less than 4096)]
+Following the call sign, MMSSTV sends the contest number as follows:
+
+	$02 HH LL XSUM
+		HH = Upper 6 bits of the number
+		LL = Lower 6 bits of the number
+		XSUM = $02 xor HH xor LL
+
+[Contest number (any string)]
+Following the call sign, MMSSTV sends the contest number as follows:
+
+	S1 S2 ... SN $01 XSUM
+		XSUM = S1 xor S2 xor ... xor SN
+Si (i = 1 to N) is ASCII code minus $20. The original code symbols $30 to $5F are represented by $10 to $3F. 
+
+[Notice]
+You can freely use the MMSSTV compatible FSKID in your program. You do not have to notify me in any case.
+
+73, Mako
+

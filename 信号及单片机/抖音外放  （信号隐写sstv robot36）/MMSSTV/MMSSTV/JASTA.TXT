@@ -1,0 +1,82 @@
+***** The 2010 JASTA SSTV Activity Contest Rules*****
+
+	http://homepage3.nifty.com/jasta/english/index.html
+
+1.Contest periods
+~~~~~~~~~~~~~~~~~~
+ From August 1st 2010 (00:00 UTC) to August 31 (24:00 UTC)
+
+2.Bands
+~~~~~~~~
+ 3.5MHz and all upper bands.Use Only frequencies which are authorized by each individual station license.
+
+3.Categories of Entry
+~~~~~~~~~~~~~~~~~~~~~
+a) "J" Category (Japanese only): Japanese domestic stations
+
+b) "S" Category(DX station): All stations operating outside of Japan. If a Japanese station operates outside Japan, this will be considered a DX contact.
+
+4.QSO Point
+~~~~~~~~~~~~~
+ Exchange the usual RSV plus a progressive QSO number starting with 001 which should be displayed in the picture exchange. Regardless of  bands used, a station may only be worked  once each UTC day .
+ If possible, during the exchange,  include one's own face picture or some kind of illustration. QSO points authorized  by bands.
+
+	3.5-28MHz ... 1 point
+	50-430MHz ... 2 points
+	1200MHz & upper ... 3 points
+
+5.Multipliers
+~~~~~~~~~~~~
+ Work all  Japanese callsign districts(JA1-JA0 total 10) + DXCC Countries worked. Use DXCC List.  Do not count Japan as a DXCC country + Number of  days on the air.  (10 days at the maximum even if a station  operates  more than 10 days)
+
+note:Prefix 7K-7N's are all JA1 area
+
+6.Scoring
+~~~~~~~~~
+ The final score is computed by multiplying the sum of the QSO points by the sum of multipliers as described in Paragraph 5.
+
+7.Contest awards
+~~~~~~~~~~~~~~~~~
+1) A shield award will be sent to the 1st, the 2nd and the 3rd Score of each sections. But when the number of stations are less than 10, awards will be sent to the 1st place winner only.
+
+2) A special activity award will be sent to some of the stations who work over 10 days by lot.
+      (A JASTA T-shirts to 20 stations)
+
+3) New face certificate will be sent to the 1st of new comers. so please annotate your summary sheets "new Comer" on summary sheets.
+
+4) YL certificate will be sent to the 1st place YL stations.
+
+8.Logs
+~~~~~~~
+ Summary sheets and Log sheets should be arranged and mailed to the Contest manager. Email contest Summary sheet and logs to: JASTA Contest Secretary ja3wzt@mue.biglobe.ne.jp  The log should be in a text file format.  Email (text format)  summary.  E-Mail logs are acceptable now. Both Summary and logs should be forwarded to ja3wzt@mue.biglobe.ne.jp  Assure you station callsign is in the e-mail subject line.
+
+* DX stations, "CQ WW" contest format is acceptable. Please enclose SASE and 1 IRC for reply. The log in a text file by Email is also acceptable now.
+
+9.Deadline for log entries
+~~~~~~~~~~~~~~~~~~~~~~~~~
+ Log entries with a stamp of a local POST office dated not later than September 30, 2010.(UTC) In case of Email, it must be received by the same above deadline.(UTC) 
+
+10.Regulations
+~~~~~~~~~~~~~~
+1) All Amateur Radio stations who has a license to transmit SSTV signal.
+
+2) Output power: Up to maximum power officially authorized by the operators class license .
+
+3) Both B/W and Color Picture QSO are accepted.
+
+4) A contest QSO should be one station to one station QSO. Round table style QSOÅfs between multiple stations will not be counted.
+
+5) Cross band QSO will not be counted as a contest QSO.
+
+6) All the QSO; JA to JA station, JA to DX station, DX to DX station will be counted and  accepted as contest QSOs.
+
+11.JASTA Contest Results
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+ The contest results will be sent to all stations who include a SASE. Aditionally announcement will be made  on JASTA homepage and Japanese "CQ ham radio" magazine .
+
+12.The Contest Manager and Mailing Address
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JASTA Contest Secretariat   Email:ja3wzt@mue.biglobe.ne.jp
+c/o YOSHIKAZU TANABE JA3WZT/1 
+905-8,SHIMOTANIGANUKI,IRUMA,SAITAMA,358 JAPAN
+

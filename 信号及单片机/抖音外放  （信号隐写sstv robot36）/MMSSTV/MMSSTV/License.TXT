@@ -1,0 +1,71 @@
+MMSSTV  © 2001-2012 by Makoto Mori, JE3HHT
+******************************************
+
+TERMS and Conditions:
+=====================
+(MMSSTV Program & Help file)
+MMSSTV is freeware.  The world wide copyright is held by Makoto (Mako) Mori - 
+JE3HHT.  MMSSTV is released with no support or warranty.  The author accepts
+no responsible and/or liability for damage that may be caused by the use of 
+the MMSSTV program.
+
+MMSSTV may be freely copied and/or re-distribution provide that you make no 
+charge for the program.  Shareware distributors who include MMSSTV on a CD 
+may charge reasonable fee for the service.  This fee should be in line with
+what is considered normal such Shareware distributions. Under no circumstances
+can you make any charge for the MMSSTV program or Documentation.
+
+Programmers: Distributing the MMSSTV Engine & Help file
+===================================
+You may utilize the MMSSTV Engine with your program under the following 
+conditions: Please read carefully!
+
+FREEWARE and PUBLIC DOMAIN PROGRAMS
+===================================
+If you distribute your program as freeware, you can use the MMSSTV Engine 
+and include MMSSTV.EXE as part of your distribution.  Please include a link 
+to the MM Hamsoft Website on your page! A link to your site will be added 
+to the MM Hamsoft Website when I am notified of your program. 
+
+COMMERCIAL PROGRAMS (all programs that charge a fee)
+====================================================
+If you distribute a commercial program, you can include code to use the 
+MMSSTV Engine in your software.  However, you CAN NOT include 
+MMSSTV.EXE as part of your distribution.
+
+You must provide a link on your Website to the MM Hamsoft Website where 
+the MMSSTV Engine may be downloaded by your users.  This will insure 
+that the latest version is used.  Do not link directly to the file as this
+path may change!  A link to your site will be added to the MM Hamsoft 
+Website when I am notified of your program. 
+
+Authors of the software that use the MMSSTV Engine, do not need to notify 
+JE3HHT - Makoto (Mako) Mori. Feel free to use MMSSTV under the above 
+terms, it is freeware.
+
+Why these terms?
+================
+MMSSTV is free, not to be sold and that should be made clear to all that 
+use the program in any way.  Makoto Mori, JE3HHT should receive the credit 
+due for all his time and hard work in creating his SSTV engine/program.  
+Also, a team of fellow amateurs have provided their time in working on the
+help and beta testing.  All this has been done for free, including setting 
+up and maintaining the website.  In addition, users should have access to 
+the latest version of the engine as well as support directly relating to 
+MMSSTV.
+
+ALL comments, bug reports, requests for help... etc...  
+MUST be handled through the MMSSTV Yahoo Group... 
+Members of the beta/help team as well as Mako - JE3HHT, 
+the author are reading the messages on the list server.
+
+DO NOT send e-mail directly to JE3HHT, the webmaster of the MM Hamsoft 
+Website or members of the beta/help group.
+
+Check on the website and MMSSTV group for the latest information.
+
+-----------------------------------------------------------------------
+(This file is available for future reference in the programs folder.)
+
+MM Hamsoft Website  - http://hamsoft.ca
+MMSSTV Users Group - http://groups.yahoo.com/group/MM-SSTV
